@@ -8,6 +8,7 @@ const productRoute = require('./routes/product');
 const cartRoute = require('./routes/cart');
 const orderRoute = require('./routes/order');
 const addressRoute = require('./routes/address');
+const subscribeRouter = require('./routes/subscribe');
 
 
 dotenv.config();
@@ -32,6 +33,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use("/api/auth", authRoute);
+app.use("/api/subscribe", subscribeRouter);
 app.use("/api/users", userRoute);
 app.use("/api/product", productRoute);
 app.use("/api/cart", cartRoute);
