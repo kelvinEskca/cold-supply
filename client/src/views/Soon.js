@@ -23,7 +23,7 @@ const Soon = () => {
     }
     return (
         <section className="section hero soon">
-            <video autoPlay muted loop id="myVideo" src="../assets/video.webm"></video>
+            <img src="../assets/video.gif" alt="video" id="myVideo"/>
             <div className="wrapper">
                 <div className="boxes">
                     <div className="box">
