@@ -25,7 +25,6 @@ import ProductsListing from './views/ProductsListing';
 import EditProduct from './views/EditProduct';
 import OrderListing from './views/OrderManagement';
 import OrderDetail from './views/OrderDetail';
-import Soon from './views/Soon';
 
 const App = () => {
   const [isPending, startTransition] = useTransition();
@@ -77,8 +76,7 @@ const App = () => {
   return  isPending ? (<div>Loading.....</div>) :  (
     <Router>
       <Routes>
-        <Route path="/" element={<Soon />}/>
-        <Route path="/home" element={<Home />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/index" element={<Store onAdd={onAdd} onRemove={onRemove} cart={cart} cartLength={cartItems}/>}/>
         <Route path="/about" element={<About onAdd={onAdd} onRemove={onRemove} cart={cart} cartLength={cartItems} />}/>
         <Route path="/login" element={<Login onAdd={onAdd} onRemove={onRemove} cart={cart} cartLength={cartItems}/>}/>
