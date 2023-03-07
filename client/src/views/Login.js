@@ -12,7 +12,7 @@ const Login = ({onAdd,cart,onRemove,handleSize,cartLength}) => {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try{
-            const loginUser = await axios.post('http://localhost:5000/api/auth/login',{
+            const loginUser = await axios.post('https://wild-ruby-cricket-toga.cyclic.app /api/auth/login',{
                 email:email,
                 password:password
             });

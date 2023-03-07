@@ -13,7 +13,7 @@ const OrderDetail = () => {
         const token = localStorage.getItem('token');
         const getorders = async ()=>{
             try{
-                const res = await axios.get(`http://localhost:5000/api/order/${id}`,{ headers:{token:token} });
+                const res = await axios.get(`https://wild-ruby-cricket-toga.cyclic.app /api/order/${id}`,{ headers:{token:token} });
                 setList(res.data);
             }
             catch(err){

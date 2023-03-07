@@ -35,7 +35,7 @@ const Products = () => {
         }
         else{
             try{
-                const productSubmit = await axios.post('http://localhost:5000/api/product',
+                const productSubmit = await axios.post('https://wild-ruby-cricket-toga.cyclic.app /api/product',
                 formData,{headers:{token:token}});
                 console.log(productSubmit);
                 if(productSubmit.status === 200){

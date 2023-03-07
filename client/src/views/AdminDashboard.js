@@ -16,7 +16,7 @@ const AdminDashboard = () => {
         const token = localStorage.getItem('token');
         const getUsers = async ()=>{
             try{
-                const res = await axios.get('http://localhost:5000/api/users',{ headers:{token:token} });
+                const res = await axios.get('https://wild-ruby-cricket-toga.cyclic.app /api/users',{ headers:{token:token} });
                 settotalUsers(res.data.total);
                 setusers(res.data.users);
             }
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
         const token = localStorage.getItem('token');
         const getOrders = async ()=>{
             try{
-                const res = await axios.get('http://localhost:5000/api/order',{ headers:{token:token} });
+                const res = await axios.get('https://wild-ruby-cricket-toga.cyclic.app /api/order',{ headers:{token:token} });
                 settotalOrders(res.data.total);
             }
             catch(err){
@@ -44,7 +44,7 @@ const AdminDashboard = () => {
     useEffect(()=>{
         const getProducts = async ()=>{
             try{
-                const res = await axios.get('http://localhost:5000/api/product');
+                const res = await axios.get('https://wild-ruby-cricket-toga.cyclic.app /api/product');
                 settotalProducts(res.data.total);
             }
             catch(err){
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
     const handleDelete = async (i) =>{
         const id = i._id;
         try{
-            const res = await axios.post(`http://localhost:5000/api/users/delete/${id}`,{
+            const res = await axios.post(`https://wild-ruby-cricket-toga.cyclic.app /api/users/delete/${id}`,{
                 id:id
             },{ headers:{token:token} });
             if(res.status === 200){

@@ -9,7 +9,7 @@ const Store = ({onAdd,cart,onRemove,handleSize,cartLength}) => {
     useEffect(()=>{
         const getProducts = async ()=>{
             try{
-                const res = await axios.get('http://localhost:5000/api/product');
+                const res = await axios.get('https://wild-ruby-cricket-toga.cyclic.app /api/product');
                 setList(res.data.products);
             }
             catch(err){

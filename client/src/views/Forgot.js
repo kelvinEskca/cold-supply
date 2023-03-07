@@ -13,7 +13,7 @@ const Forgot = ({onAdd,cart,onRemove,handleSize,cartLength}) => {
         }
         else{
             try{
-                const userSubmit = await axios.post('http://localhost:5000/api/auth/forget',{
+                const userSubmit = await axios.post('https://wild-ruby-cricket-toga.cyclic.app /api/auth/forget',{
                     email:email
                 });
                 console.log(userSubmit);

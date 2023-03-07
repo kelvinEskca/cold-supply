@@ -35,7 +35,7 @@ const EditProduct = () => {
     useEffect(()=>{
         const getProducts = async ()=>{
             try{
-                const res = await axios.get(`http://localhost:5000/api/product/${id}`);
+                const res = await axios.get(`https://wild-ruby-cricket-toga.cyclic.app /api/product/${id}`);
                 setList(res.data);
             }
             catch(err){
@@ -54,7 +54,7 @@ const EditProduct = () => {
         }
         else{
             try{
-                const productSubmit = await axios.post(`http://localhost:5000/api/product/update/${id}`,
+                const productSubmit = await axios.post(`https://wild-ruby-cricket-toga.cyclic.app /api/product/update/${id}`,
                 formData,{headers:{token:token}});
                 if(productSubmit.data.status === 200){
                     alert(productSubmit.data.message);

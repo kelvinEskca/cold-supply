@@ -36,7 +36,7 @@ const Addresses = ({onAdd,cart,onRemove,handleSize,cartLength}) => {
         e.preventDefault();
         if(address !== ''){
             try{
-                const result = await axios.post('http://localhost:5000/api/address',{
+                const result = await axios.post('https://wild-ruby-cricket-toga.cyclic.app /api/address',{
                     fname:address.fname,
                     lname:address.lname,
                     email:user.email,
@@ -80,7 +80,7 @@ const Addresses = ({onAdd,cart,onRemove,handleSize,cartLength}) => {
         const id = user._id;
         if(editaddress !== ''){
             try{
-                const addressEdit = await axios.post(`http://localhost:5000/api/address/update/${id}`,{
+                const addressEdit = await axios.post(`https://wild-ruby-cricket-toga.cyclic.app /api/address/update/${id}`,{
                     fnameEdit:editaddress.fnameEdit,
                     lnameEdit:editaddress.lnameEdit,
                     emailEdit:user.email,

@@ -11,7 +11,7 @@ const ProductsListing = () => {
     const handleDelete = async (i) =>{
         const id = i._id;
         try{
-            const res = await axios.post(`http://localhost:5000/api/product/delete/${id}`,{
+            const res = await axios.post(`https://wild-ruby-cricket-toga.cyclic.app /api/product/delete/${id}`,{
                 id:id
             },{ headers:{token:token} });
             if(res.status === 200){
@@ -29,7 +29,7 @@ const ProductsListing = () => {
     useEffect(()=>{
         const getProducts = async ()=>{
             try{
-                const res = await axios.get('http://localhost:5000/api/product');
+                const res = await axios.get('https://wild-ruby-cricket-toga.cyclic.app /api/product');
                 setproducts(res.data.products);
             }
             catch(err){
